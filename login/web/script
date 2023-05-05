@@ -1,0 +1,51 @@
+document.querySelector('.img-btn').addEventListener('click', function () {
+    document.querySelector('.cont').classList.toggle('s-signup')
+}
+);
+
+function login() {
+    var mail = $('#semail').val();
+    var pass = $('#spassword').val();
+
+    // user = db.collection.find(mail);
+    // if (cpassword == user.password) {
+
+    //     location.href = "https://www.google.com";
+    // }
+
+
+
+    if (mail == "demo" && pass == "demo") {
+        alert("Incorrect Password!! ");
+    }
+
+    else {
+        location.href = "taxisite/homepage.html";
+    }
+
+
+}
+
+$('#submit').on('click', () => {
+    const username = $('#username').val();
+    const email = $('#email').val();
+    const password = $('#password').val();
+    const cpassword = $('#cpassword').val();
+    console.log("hello");
+
+    if (password != cpassword) {
+        alert("Incorrect Password!! ");
+    }
+    else {
+        console.log("pass");
+        const body = {
+            username,
+            email,
+            password
+        };
+
+        $.post(`http://localhost:5000/api/user`, body)
+            .then(response => { console.log("done"); location.href = "./index.html" })
+            .error(error => { console.error(`Error: ${error}`); });
+    }
+});
