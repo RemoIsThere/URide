@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
+   
+</head>
+<body>
+    <div class="main-container">
+        <div class="background-text">
+            <h2>Welcome to <span>URide</span></h2>
+        </div>
+        <header class="header">
+            <a href="#" id="logo"><img src="images/CabHUB12.png" alt=""></a>
+            <nav class="navbar">
+                <a href="#">home</a>
+                <!-- <a href="#">gallery</a>
+                <a href="#">blog</a> -->
+                <a href="#">about</a>
+                <a href="#">Contact</a>
+            </nav>
+            <a href="#" id="menu-bars" class="fas fa-bars"></a>
+        </header>
+        <div class="taxi-image">
+            <img src="images/carpool-removebg-preview_edited-removebg-preview.png" alt="">
+        </div>
+    </div>
+
+<!-- home section -->
+<div class="home-container">
+    <div class="home-content">
+        <div class="inner-content">
+            <a href="test/maps.html" class="booknow">book now</a>
+            <br>
+            <br>
+            <br>
+            <h2>Book right now</h2>
+            <p>Book cab on the go <p>
+            
+        </div>
+
+        <!-- <div class="inner-content">
+            <a href="https://www.google.com/" class="booknow">book now</a>
+            <br>
+            <br>
+            <br>
+            <h2>Schedule a cab</h2>
+            <p>You can book a cab in advanced<p>
+            
+        </div> -->
+
+        <div class="inner-content">
+           <div class="contact-form">
+               <img id="URide" src="images/CabHUB.png" style="height: 300px;">
+              
+           </div>
+           
+        </div>
+    </div>
+</div>
+<!-- home section ended -->
+
+<!-- our tariff -->
+
+<!-- <div class="main-tariff">
+    <h1>our <span>tarrif</span></h1>
+    <div class="inner-tarrif">
+        <div class="tarrif-container">
+            <div class="inner-box">
+                <img src="images/image1.png" alt="">
+                <h2>economy class</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat illum officia fugiat, autem facere iste repellendus omnis nemo dolore</p>
+                <h3>price: $3 /-</h3>
+                <a href="#">order now</a>
+            </div>
+        </div>
+
+        <div class="tarrif-container">
+            <div class="inner-box">
+                <img src="images/image1.png" alt="">
+                <h2 class="heading-yellow">economy class</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat illum officia fugiat, autem facere iste repellendus omnis nemo dolore</p>
+                <h3 class="yellw-section">price: $3 /-</h3>
+                <a href="#" class="btn-yellow">order now</a>
+            </div>
+        </div>
+
+        <div class="tarrif-container">
+            <div class="inner-box">
+                <img src="images/image1.png" alt="">
+                <h2>economy class</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat illum officia fugiat, autem facere iste repellendus omnis nemo dolore</p>
+                <h3>price: $3 /-</h3>
+                <a href="#">order now</a>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+<!-- our tariff ended -->
+
+<!-- fast booking -->
+
+<!-- ************////////  LIST OF FEATURES //////////********** -->
+<!-- FEATURE 1 -->
+<div class="fast-booking">
+    <h1 class="fast-hading">URide Does</h1>
+    <h2>what others don't</h2>
+    <div class="inner-fast">
+        <div class="booking-content">
+            <div class="icon-fast">
+                <span><i class="fas fa-star"></i></span>
+            </div>
+            <div class="inner-fast-text">
+                <h1>fast booking</h1>
+                <p>The URide User interface is easy to navigate through whether you want to book a cab or do a Payment.</p>
+            
+            </div>
+                
+        </div>
+        <!-- FEATURE 2 -->
+        <div class="booking-content">
+            <div class="icon-fast">
+                <!-- <span><i class="fas fa-map-marker-alt"></i></span> -->
+                <span><i class="fas fa-star"></i></span>
+            </div>
+            <div class="inner-fast-text">
+                <h1>Seamless Payment</h1>
+                <p>Uride provide many different types of payment methods like UPI payment, net-banking, credit card, debit card etc.</p>
+            
+            </div>
+        </div>
+        <!-- FEATURE 3 -->
+        <div class="booking-content">
+            <div class="icon-fast">
+                <!-- <span><i class="fas fa-map-marker-alt"></i></span> -->
+                <span><i class="fas fa-star"></i></span>
+            </div>
+            <div class="inner-fast-text">
+                <h1>Destination Recommendation</h1>
+                <p>URide also has a chatbot that helps the users to decide where to go by providing some examples in the chatbox. </p>
+            
+            </div>
+        </div>
+        <!-- FEATURE 4 -->
+        <div class="booking-content">
+            <div class="icon-fast">
+                <!-- <span><i class="fas fa-map-marker-alt"></i></span> -->
+                <span><i class="fas fa-star"></i></span>
+            </div>
+            <div class="inner-fast-text">
+                <h1>Employment opportunities</h1>
+                <p>One of the main part of our business is our drivers. we provide a resonable amount of money our drivers and the ability to pick as many number of customers they want.</p>
+            
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- fast booking end -->
+
+
+<!-- Happy customer section -->
+
+<div class="testimonials">
+    <h1 class="heading-test">happy clients</h1>
+    <div class="main-testimonials">
+        <div class="inner-test">
+            <p>I found it very easy to book a cab through URide and I also like that I can use the map itself to select my destination and not have to type the location manually. Being a Hostler Uride has made my life at Chitkara much more stress free while going back to home or some other place.</p>
+            <div class="clients">
+                <img src="images/rehmat.png" alt="">
+                <h1>Rehmat</h1>
+            </div>
+        </div>
+        <div class="inner-test">
+            <p>I like Uride because i feel the prices are better than what is offered by the other companies. Moreover I feel much more safe while traveling through URide because their is a sense of familiarity with the people of Chitkara as oppose to travelling with someone unknown.</p>
+            <div class="clients">
+                <img src="images/mayank.png" alt="">
+                <h1>Mayank</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+ <!-- <div class="myform">
+                <div class="heading">
+                    <h2>book cab</h2>
+                </div>
+                <div class="myfields">
+                    <input type="text" placeholder="when">
+                    <input type="text" placeholder="when">
+                    <input type="text" placeholder="when">
+                    <input type="text" placeholder="when">
+                    <input type="text" placeholder="when">
+                    <input type="text" placeholder="when">
+                </div>
+                <a href="#">Submit</a>
+            </div> -->
