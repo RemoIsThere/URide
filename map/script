@@ -1,0 +1,7 @@
+window.botpressWebChat.init({
+    "botId": "8a8a1971-644b-4a15-8922-251a321b0ddb",
+    "hostUrl": "https://cdn.botpress.cloud/webchat/v0",
+    "messagingUrl": "https://messaging.botpress.cloud",
+    "clientId": "8a8a1971-644b-4a15-8922-251a321b0ddb",
+    "botName": "URide bot"
+});
