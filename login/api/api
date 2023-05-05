@@ -1,0 +1,33 @@
+const express = require('express');
+const app = express();
+const port = 5000;
+const cors = require('cors');
+app.use(cors());
+const mongoose = require('mongoose');
+const user = require('./models/user');
+mongoose.connect('mongodb+srv://mayank4771be21:2110994771@cluster0.a8hsuo4.mongodb.net/mydb', { useNewUrlParser: true, useUnifiedTopology: true }); //Username and Password - mongodb+srv://Mayank:Mayank@#0503@cluster0.j4yc9ph.mongodb.net/Uride_data?retryWrites=true&w=majority
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
+app.post('/api/user', (req, res) => {
+  console.log("here");
+  const { username, email, password } = req.body;
+  const newDevice = new user({
+    username,
+    email,
+    password
+  });
+  newDevice.save(err => {
+    return err
+      ? res.send(err)
+      : res.send('successfully added device and data');
+  });
+});
+
+app.listen(port, () => { console.log(`listening on port ${port}`); });
