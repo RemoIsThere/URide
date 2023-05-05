@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+    <title>Know your Area!</title>
+    <script src="script_maps.js" defer></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="maps.css">
+
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+
+<body style="background-color: #ffc61a;">
+
+
+
+    <div class="container">
+        <div id='map'></div>
+        <div class="omrs-input-group" style="padding: 10px;">
+            <div class="textbox">
+                <label class="omrs-input-underlined">
+                    <input required type="text">
+                    <span class="omrs-input-label">Enter your name</span>
+                  </label>
+            </div>
+
+            <div class="phonebox" style="margin-top: 20px;">
+                <label class="omrs-input-underlined">
+                    <input required type="tel">
+                    <span class="omrs-input-label" style="margin-top: 75px;">Enter your number</span>
+                  </label>
+
+            <div class="dropdown" style="margin-top: 10px;">
+                <select>
+                    <option value="rajpura">Rajpura</option>
+                    <option value="zirakpur">Zirakpur</option>
+                    <option value="panchkula">Panchkula</option>
+                    <option value="banur">Banur</option>
+                    <option value="patiala">Patiala</option>
+
+                    <option value="none" disabled hidden selected>Select the location</option>
+                </select>
+                <span class="border"></span>
+            </div>
+            <div class="dropdown" style="margin-top: 10px;">
+                <select>
+                    <option value="driver">Driver</option>
+                    <option value="passenger">Passenger</option>
+                    <option value="none" disabled hidden selected>Select the role which most suits you</option>
+                </select>
+                <span class="border"></span>
+            </div>
+            <div class="main" style="margin-top: 20px;">
+              <a href="web_list/public/driver_list.html"><button class="button" id="submit">Submit</button><br></a>
+                
+                <a href="razor_pay\razor_pay\client\public\index.html"><button class="button" id="book">Book</button></a>
+                
+                <div class="loader">
+                  <div class="check">
+                    <span class="check-one"></span>
+                    <span class="check-two"></span>
+                  </div>
+                </div>
+                
+              </div>
+        </div>
+    </div>
+
+    
+
+    <div class='sidebar'>
+        <div class='heading'>
+          <h1>Our locations</h1>
+        </div>
+        <div id='listings' class='listings'></div>
+      </div>
+
+    <script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
+    <script src="https://mediafiles.botpress.cloud/8a8a1971-644b-4a15-8922-251a321b0ddb/webchat/config.js"
+        defer></script>
+
+</body>
+
+</html>
