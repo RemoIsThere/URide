@@ -1,0 +1,63 @@
+const API_URL = 'http://localhost:5001/api';
+
+console.log("Hello");
+
+$.get(`${API_URL}/devices`)
+  .then(response => {
+    console.log(response);
+    response.forEach(device => {
+      console.log(device.name);
+      $('#devices tbody').append(`
+      <tr>
+        <td>${device.name}</td>
+        <td>${device.phone_number}</td>
+        <td>${device.number_of_people}</td>
+        <td>${device.place}</td>
+        <td>${device.role}</td>
+        <td><div><button class="btn btn-warning">Select</button></div></td>
+      </tr>`
+      );
+    });
+
+    $('#devices tbody button').click(function(event) {
+      // Get the device ID from the button's data-id attribute
+      const deviceId = $(this).data('id');
+
+      // Redirect the user to google.com
+      window.location.href = 'other_maps.html';
+    });
+
+
+  })
+  .catch(error => {
+    console.error(`Error: ${error}`);
+  });
+
+
+$('#next_page').on('click', () => {
+  const name = $('#name').val();
+  const phone_number = $('#phone_number').val();
+  const number_of_people = $('#type_of_car').val();
+  const place = $('#place').val();
+  const role = $('#role').val();
+
+  const body = {
+    name,
+    phone_number,
+    number_of_people,
+    place,
+    role
+  };
+
+  $.post(`${API_URL}/devices`, body)
+    .then(response => {
+      location.href = 'driver_list.html';
+    })
+    .catch(error => {
+      console.error(`Error: ${error}`);
+    });
+});
+
+$('#next_is_payment').click(function(event) {
+  window.location.href = 'razor_pay/client/public/index.html';
+});
