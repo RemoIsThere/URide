@@ -1,14 +1,13 @@
-const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://rehmat4813:Wweisbest01@cluster0.2aykxcx.mongodb.net/test', { useNewUrlParser: true, useUnifiedTopology: true });
 const express = require('express');
-
 const app = express();
-
+const port = 5000;
+const cors = require('cors');
+app.use(cors());
+const mongoose = require('mongoose');
+const user = require('./models/user');
+mongoose.connect('mongodb+srv://mayank4771be21:2110994771@cluster0.a8hsuo4.mongodb.net/mydb', { useNewUrlParser: true, useUnifiedTopology: true }); //Username and Password - mongodb+srv://Mayank:Mayank@#0503@cluster0.j4yc9ph.mongodb.net/Uride_data?retryWrites=true&w=majority
 const bodyParser = require('body-parser');
-const Device = require('./models/device');
-const port = 5001;
 app.use(bodyParser.urlencoded({ extended: false }))
-
 app.use(bodyParser.json())
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -16,14 +15,13 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.post('/api/devices', (req, res) => {
-  const { name, phone_number, number_of_people, place, role } = req.body;
-  const newDevice = new Device({
-    name,
-    phone_number,
-    number_of_people,
-    place,
-    role
+app.post('/api/user', (req, res) => {
+  console.log("here");
+  const { username, email, password } = req.body;
+  const newDevice = new user({
+    username,
+    email,
+    password
   });
   newDevice.save(err => {
     return err
@@ -32,17 +30,4 @@ app.post('/api/devices', (req, res) => {
   });
 });
 
-app.get('/api/devices', (req, res) => {
-  Device.find({}, (err, devices) => {
-    if (err == true) {
-      return res.send(err);
-    } else {
-      return res.send(devices);
-    }
-  });
-});
-
-
-app.listen(port, () => {
-  console.log(`listening on port ${port}`);
-});
+app.listen(port, () => { console.log(`listening on port ${port}`); });
